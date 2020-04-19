@@ -39,8 +39,9 @@ class _DicePageState extends State<DicePage> {
                 onPressed: () {
                   setState(() {
                     leftDiceNum = r.nextInt(6) + 1;
+                    rightDiceNum = r.nextInt(6) + 1;
                     print("Button 1 is pressed");
-                    print('Random is $leftDiceNum');
+                    print('Random is left: $leftDiceNum & the right: $rightDiceNum');
                   });
                 },
               )
@@ -51,9 +52,10 @@ class _DicePageState extends State<DicePage> {
                 onPressed: () {
                   setState(() {
                     // Generates for 0 to 6 excluding 6.
+                    leftDiceNum = r.nextInt(6) + 1;
                     rightDiceNum = r.nextInt(6) + 1;
                     print('Button 2 is pressed');
-                    print('Random is $rightDiceNum');
+                    print('Random is left: $leftDiceNum & the right: $rightDiceNum');
                   });
                 },
               )
