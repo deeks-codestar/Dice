@@ -38,8 +38,7 @@ class _DicePageState extends State<DicePage> {
                 child: Image.asset("images/dice$leftDiceNum.png"),
                 onPressed: () {
                   setState(() {
-                    leftDiceNum = r.nextInt(6);
-                    if (leftDiceNum == 0) leftDiceNum++;
+                    leftDiceNum = r.nextInt(6) + 1;
                     print("Button 1 is pressed");
                     print('Random is $leftDiceNum');
                   });
@@ -51,8 +50,8 @@ class _DicePageState extends State<DicePage> {
                 child: Image.asset("images/dice$rightDiceNum.png"),
                 onPressed: () {
                   setState(() {
-                    rightDiceNum = r.nextInt(6);
-                    if (rightDiceNum == 0) rightDiceNum++;
+                    // Generates for 0 to 6 excluding 6.
+                    rightDiceNum = r.nextInt(6) + 1;
                     print('Button 2 is pressed');
                     print('Random is $rightDiceNum');
                   });
